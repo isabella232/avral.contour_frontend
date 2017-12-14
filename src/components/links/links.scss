@@ -1,0 +1,9 @@
+.icon-link{
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+
+    &:hover{
+        color: unquote("rgb(#{$color-primary})");
+        text-decoration: none;
+    }
+}

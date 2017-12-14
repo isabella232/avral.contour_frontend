@@ -1,0 +1,51 @@
+h1 {
+@include typo-display-1;
+font-size: 30px;
+margin-top: 24px;
+margin-bottom: 24px;
+}
+
+h2 {
+@include typo-headline;
+
+margin-top: 24px;
+margin-bottom: 24px;
+}
+
+h3 {
+@include typo-title;
+
+margin-top: 24px;
+margin-bottom: 12px;
+}
+
+h4 {
+@include typo-subhead;
+
+margin-top: 24px;
+margin-bottom: 16px;
+}
+
+h5 {
+@include typo-subhead;
+
+margin-top: 24px;
+margin-bottom: 16px;
+}
+
+h6 {
+@include typo-subhead;
+
+margin-top: 24px;
+margin-bottom: 16px;
+}
+
+h1, h2, h3{
+    &:first-child{
+        margin-top:0;
+    }
+}
+
+p:last-child{
+    margin-bottom: 0;
+}

@@ -1,0 +1,41 @@
+@import "material-design-lite/src/_color-definitions";
+@import "components/_variables";
+
+/* Material Design Lite */
+
+// Variables and mixins
+@import "material-design-lite/src/variables";
+@import "material-design-lite/src/mixins";
+
+// Resets and dependencies
+@import "material-design-lite/src/resets/resets";
+@import "material-design-lite/src/typography/typography";
+
+// MDL Components
+@import "material-design-lite/src/grid/grid";
+@import "material-design-lite/src/shadow/shadow";
+@import "material-design-lite/src/button/button";
+@import "material-design-lite/src/textfield/textfield";
+
+// Vendors
+@import "leaflet/dist/leaflet";
+@import "leaflet-areaselect/src/leaflet-areaselect";
+
+//Geoprocessing components
+@import "components/grid/grid";
+@import "components/geoproc/geoproc";
+@import "components/order-form/order-form";
+@import "components/check-form/check-form";
+@import "components/links/links";
+@import "components/typography/typography";
+@import "components/layout/layout";
+@import "components/forms/forms";
+
+
+body{
+  background-color: unquote("rgb(#{$palette-grey-100})");
+}
+
+*{
+	box-sizing: border-box;
+}

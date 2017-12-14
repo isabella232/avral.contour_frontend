@@ -1,0 +1,34 @@
+.geoproc-content,
+.mdl-grid .geoproc-content{
+	.form__label--inline{
+		width: 90px;
+	}
+
+	@media (max-width: 1280px){
+		width: 460px;
+	}
+	@media (max-width: $grid-desktop-breakpoint){
+		width: 100%;
+	}
+}
+
+.gof__region-group{
+	white-space: nowrap;
+
+	@media (min-width: $grid-desktop-breakpoint) and (max-width: 1280px){
+		width: 100%;
+	}
+}
+	.gof__region-textfield{
+		width: 175px;
+	}
+
+.gof__step-group{
+	.mdl-textfield{
+		width: 48px;
+
+		input{
+			text-align: center;
+		}
+	}
+}

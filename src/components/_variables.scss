@@ -1,0 +1,22 @@
+$preferred_font: 'Roboto_local', 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$material-design-icons-font-path: '../fonts/';
+
+$sidebar-width: 500px;
+
+$card-vertical-padding: 20px;
+$card-horizontal-padding: 24px;
+$card-title-font-size: 20px;
+$card-supporting-text-text-color: unquote("rgba(#{$color-black}, 0.87)");
+
+$color-primary: "61, 140, 224";
+$color-primary-light: "136, 212, 243";
+$input-text-label-color: unquote("rgba(#{$color-black}, 0.58)");
+$selectfield-label-color: $input-text-label-color;
+
+$data-table-hover-color: unquote("rgb(#{$palette-grey-100})");
+$data-table-divider-color: unquote("rgb(#{$palette-grey-200})");
+
+$grid-desktop-breakpoint: 1024px;
+$grid-tablet-breakpoint: 680px;
+
+$text-link-color: unquote("rgb(#{$color-primary})") !default;

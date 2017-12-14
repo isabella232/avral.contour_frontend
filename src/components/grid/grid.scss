@@ -1,0 +1,28 @@
+.mdl-grid{
+    margin-left: -$grid-desktop-gutter/2;
+    margin-right: -$grid-desktop-gutter/2;
+    padding: 0;
+
+    &--no-spacing{
+        margin-left:0;
+        margin-right: 0;
+    }
+}
+
+
+.mdl-cell{
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+@media (max-width: $grid-desktop-breakpoint) and (min-width:  $grid-tablet-breakpoint){
+    .mdl-grid--no-spacing > .mdl-cell {
+        width: auto;
+    }
+}
+
+@media (min-width: $grid-tablet-breakpoint) {
+    .mdl-grid--no-spacing > .mdl-cell {
+        width: auto;
+     }
+}

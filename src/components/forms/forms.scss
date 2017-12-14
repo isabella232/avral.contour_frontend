@@ -1,0 +1,72 @@
+.form{
+    .mdl-button{
+        margin-top: 16px;
+        margin-right: 16px;
+    }
+
+    &__label{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .mdl-textfield{
+      vertical-align: middle;
+    }
+
+    &__postfix{
+      margin-left: 4px;
+    }
+
+    &__message{
+      margin-top: 16px;
+      vertical-align: top;
+      display: none;
+      max-width: 350px;
+
+      &.active{
+        display: inline-block;
+      }
+
+      &--error{
+        color: rgb(213,0,0);
+      }
+
+      &--success{
+        color: #4CAF50;
+      }
+    }
+}
+
+.inline-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__textfield{
+    flex-grow: 1;
+  }
+  &__button{
+    margin-left: 16px;
+  }
+}
+
+.form-group{
+  &__error{
+    @extend .mdl-textfield__error;
+    position: static;
+    margin-top: -16px;
+    display: none;
+  }
+
+  &.is-invalid{
+    .form-group__error{
+      visibility: visible;
+      display: block;
+    }
+
+    .mdl-textfield__input{
+        border-color: $input-text-error-color;
+        box-shadow: none;
+    }
+  }
+}

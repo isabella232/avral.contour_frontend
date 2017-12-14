@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>NextGIS Geoprocessing</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <div class="layout mdl-grid mdl-grid--no-spacing">
+        <div class="geoproc-content mdl-cell">
+            <h1 class="geoproc-content__title bordered-title">Contours generator</h1>
+            <form action="" id="geoproc-order-form" class="geoproc-order-form form">
+                <div id="region-group" class="gof__region form-group">
+                    <label class="form__label">Region for processing</label>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone gof__region-group">
+                            <label for="south-west-coord" class="form__label form__label--inline form__label--sub">South West: </label>
+                            <div class="mdl-textfield mdl-js-textfield gof__region-textfield">
+                                <input class="mdl-textfield__input" type="text" id="south-west-coord" disabled>
+                                <label class="mdl-textfield__label" for="south-west-coord"></label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone gof__region-group">
+                            <label for="nord-east-coord" class="form__label form__label--inline form__label--sub">North East: </label>
+                            <div class="mdl-textfield mdl-js-textfield gof__region-textfield">
+                                <input class="mdl-textfield__input" type="text" id="nord-east-coord" disabled>
+                                <label class="mdl-textfield__label" for="nord-east-coord"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="form-group__error">The area of the region is too big. For geoprocessing permitted area less then 10 000 sq km</span>
+                </div>
+                <div class="form-group gof__step-group">
+                    <label for="sample3" class="form__label form__label--inline">Contour step: </label>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="number" id="isoline-step" value="10">
+                        <label class="mdl-textfield__label" for="isoline-step"></label>
+                    </div>
+                    <label class="form__postfix">м</label>
+                </div>
+                <button id="process-btn" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--primary" type="submit">
+                    Get contours
+                </button>
+                <div class="form__message form__message--error"></div>
+                <div class="form__message form__message--success">Contours are being generated.<br>
+                Task ID: <code id="result-id">6962e34c-e6c6-11e6-8b08-00163e5cdd44</code></div>
+            </form>
+            <hr style="margin: 40px 0">
+            <h2>Check result</h2>
+            <form action="" id="geoproc-check-form" class="geoproc-check-form">
+                <div class="inline-group">
+                    <div class="inline-group__textfield mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="check-id">
+                        <label class="mdl-textfield__label" for="check-id">Enter task ID to see if results are ready</label>
+                    </div>
+                    <button class="inline-group__button mdl-button mdl-js-button mdl-button--raised" type="submit">
+                        Check
+                    </button>
+                </div>                
+                <div class="form__message form__message--warning"></div>
+                <div class="form__message form__message--error"></div>
+                <div class="form__message form__message--success">Hooray! <a href="" id="contours-link" target="_blank">Download your contours</a></div>
+            </form>
+        </div>
+        <div id="map" class="geoproc-map mdl-cell">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

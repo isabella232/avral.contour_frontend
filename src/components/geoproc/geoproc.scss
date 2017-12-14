@@ -1,0 +1,14 @@
+.geoproc-content,
+.mdl-grid .geoproc-content{
+	background-color: #fff;
+	@include shadow-8dp();
+	overflow: auto;
+	padding: 24px;
+	width: 600px;
+}
+
+.geoproc-map,
+.mdl-grid.geoproc-map{
+	flex-grow: 1;
+	min-height: 500px;
+}
